@@ -1,0 +1,15 @@
+streamlit
+pandas
+pipreqs
+lxml
+nltk
+pdfplumber
+rake_nltk
+PyPDF2
+pydantic
+matplotlib
+seaborn
+plotly
+missingno
+streamlit_option_menu
+numerize
