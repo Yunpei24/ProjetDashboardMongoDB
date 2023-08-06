@@ -457,7 +457,7 @@ def formulaire_country():
     cca2 = st.text_input("CCA2")
     cca3 = st.text_input("CCA3")
     netChange = st.number_input("Net Change", min_value=0.0)
-    growthRate = st.number_input("Growth Rate", min_value=-1.0, max_value=1.0)
+    growthRate = st.number_input("Growth Rate", min_value=-1.1, max_value=1.0)
     worldPercentage = st.number_input("World Percentage", min_value=0.0, max_value=1.0)
     density = st.number_input("Density", min_value=0.0)
     densityMi = st.number_input("Density (mi²)", min_value=0.0)
@@ -469,6 +469,10 @@ def formulaire_country():
     pop2023 = st.number_input("Population in 2023", min_value=0)
     pop2030 = st.number_input("Population in 2030", min_value=0)
     pop2050 = st.number_input("Population in 2050", min_value=0)
+
+    area = 0 if area == 1 else area
+    growthRate = 0 if growthRate == -1.1 else growthRate
+
 
     # On crée l'objet Country
     country = Country(
