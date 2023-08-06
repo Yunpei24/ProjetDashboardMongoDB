@@ -30,10 +30,10 @@ def insert_country(country: Country):
     """
     country_dict = dict(country)
     response = requests.post(f"{api_url}/insert_country/", json=country_dict)
-    if response.status_code == 201:
+    if response.status_code == 200:
         return response.json()
     else:
-        print("Erreur lors de l'insertion des données.")
+        print("Error inserting data.")
         return None
     
 # L'endpoint pour la mise à jour d'un pays à travers l'API
@@ -514,12 +514,12 @@ def insert_update_delete_country(): # IUDC
             # Si la réponse est valide
             if response is not None:
                 # On affiche un message de confirmation
-                st.success("Les données ont été insérées avec succès.")
+                st.success("Successfully inserted data.")
                 # On affiche les données insérées
                 st.json(response)
             else:
                 # On affiche un message d'erreur
-                st.error("Erreur lors de l'insertion des données.")
+                st.error("Error inserting data.")
     # Si l'action est "Update"
     elif action == "Update":
         # On récupère l'ID du document à mettre à jour
@@ -533,12 +533,12 @@ def insert_update_delete_country(): # IUDC
             # Si la réponse est valide
             if response is not None:
                 # On affiche un message de confirmation
-                st.success("Les données ont été mises à jour avec succès.")
+                st.success("Successfully updated data.")
                 # On affiche les données mises à jour
                 st.json(response)
             else:
                 # On affiche un message d'erreur
-                st.error("Erreur lors de la mise à jour des données.")
+                st.error("Error updating data.")
     # Si l'action est "Delete"
     elif action == "Delete":
         # On récupère l'ID du pays à supprimer
@@ -550,12 +550,12 @@ def insert_update_delete_country(): # IUDC
             # Si la réponse est valide
             if response is not None:
                 # On affiche un message de confirmation
-                st.success("Les données ont été supprimées avec succès.")
+                st.success("Successfully deleted data.")
                 # On affiche les données supprimées
                 st.json(response)
             else:
                 # On affiche un message d'erreur
-                st.error("Erreur lors de la suppression des données.")
+                st.error("Error deleting data.")
            
 # Graphe superficie des pays
 def graph_area(df_area):
