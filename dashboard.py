@@ -515,8 +515,11 @@ def insert_update_delete_country(): # IUDC
             if response is not None:
                 # On affiche un message de confirmation
                 st.success("Successfully inserted data.")
-                # On affiche les données insérées
-                st.json(response)
+                # Créer un dataframe avec les données insérées (country)
+                df = pd.DataFrame([country.__dict__])
+                # On affiche les données insérées dans un tableau
+                st.dataframe(df)
+                
             else:
                 # On affiche un message d'erreur
                 st.error("Error inserting data.")
