@@ -517,8 +517,8 @@ def insert_update_delete_country(): # IUDC
                 st.success("Successfully inserted data.")
                 # Créer un dataframe avec les données insérées (country)
                 df = pd.DataFrame([country.__dict__])
-                # On affiche les données insérées dans un tableau
-                st.dataframe(df)
+                # On affiche les données insérées dans un tableau vertical
+                st.table(df.T)
                 
             else:
                 # On affiche un message d'erreur
