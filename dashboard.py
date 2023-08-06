@@ -559,9 +559,7 @@ def insert_update_delete_country(): # IUDC
             if response is not None:
                 # On affiche un message de confirmation
                 st.success("Successfully deleted data.")
-                df = pd.DataFrame([country.__dict__])
-                # On affiche les données insérées dans un tableau vertical
-                st.table(df.T)
+                
             else:
                 # On affiche un message d'erreur
                 st.error("Error deleting data.")
