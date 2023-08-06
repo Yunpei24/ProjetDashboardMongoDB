@@ -451,7 +451,7 @@ def all_Collection(df_selection, cpt):
 # Fonction pour la page permettant d'inserer, mettre à jour et supprimer un pays dans la collection MongoDB grace à l'API declenché par des boutons
 def formulaire_country():
     country = st.text_input("Country")
-    rank = st.number_input("Rank", min_value=1, max_value=250)
+    rank = st.number_input("Rank", min_value=0, max_value=250)
     area = st.number_input("Area", min_value=1.0)
     landAreaKm = st.number_input("Land Area (km²)", min_value=0.0)
     cca2 = st.text_input("CCA2")
