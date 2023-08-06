@@ -587,7 +587,7 @@ def countries_area(df_area):
     st.subheader("📝 Countries and their area")
 
     # Saisr le nombre de pays à afficher
-    nombre_elmt = st.number_input("Nombre de pays à afficher", min_value=1, max_value=250, value=10)
+    nombre_elmt = st.number_input("Number of countries to display", min_value=1, max_value=250, value=10)
 
     # On récupère les nombre_elmt premiers éléments du dataframe
     df_area_new = df_area.head(nombre_elmt)
