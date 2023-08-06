@@ -592,8 +592,15 @@ def countries_area(df_area):
     # On récupère les nombre_elmt premiers éléments du dataframe
     df_area_new = df_area.head(nombre_elmt)
 
-    # On affiche les données dans un tableau
+    # Creation d'un dataframe avec le nom du pays et sa superficie
+    df_area_new = pd.DataFrame({
+        "country": df_area_new["country"],
+        "area": df_area_new["area"]
+    })
+
+    # On affiche les données (nom du pays et sa superficie) dans un tableau
     st.dataframe(df_area_new, use_container_width=True)
+
     # On affiche le graphique
     graph_area(df_area_new)
 
