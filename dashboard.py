@@ -559,19 +559,19 @@ def insert_update_delete_country(): # IUDC
            
 # Graphe superficie des pays
 def graph_area(df_area):
-    st.subheader("📊 Superficie des pays")
+    st.subheader("📊 Area of countries")
     # On affiche le graphique
     fig_area = px.bar(
         df_area,
         x="country",
         y="area",
         color="country",
-        title="Superficie des pays"
+        title="Area of countries"
     )
     fig_area.update_layout(
-        xaxis_title="Pays",
-        yaxis_title="Superficie (km²)",
-        legend_title="Pays",
+        xaxis_title="Countries",
+        yaxis_title="Area (km²)",
+        legend_title="Countries",
         font=dict(
             family="Courier New, monospace",
             size=15, # revoir la taille de la police
